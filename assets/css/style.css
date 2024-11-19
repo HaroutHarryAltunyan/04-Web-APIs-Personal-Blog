@@ -1,0 +1,134 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            height: 400px;
+            border: 1px solid #ccc;
+            position: relative; /* For positioning pseudo-elements */
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff; /* White background for sections */
+            position: relative; /* For positioning pseudo-elements */
+        }
+
+        .left-section::before, .right-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000; /* Black horizontal line */
+        }
+
+        .left-section::after, .right-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #000; /* Black vertical line */
+        }
+
+        .left-section::after {
+            left: 0; /* Align vertical line on left */
+        }
+
+        .right-section::after {
+            right: 0; /* Align vertical line on right */
+        }
+
+        .circle-image {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to bottom, #ffffe0, #ffd700); /* Gradient from light yellow to dark yellow */
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            background-color: #ffffff; /* Ensure separator background is white */
+            position: relative; /* For positioning horizontal lines */
+        }
+
+        .separator::before, .separator::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #000; /* Black vertical lines */
+        }
+
+        .separator::before {
+            left: 0;
+        }
+
+        .separator::after {
+            right: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Ensure form takes up full width of the right section */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000; /* Black button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333; /* Darker shade of black on hover */
+        }
+        
+  
